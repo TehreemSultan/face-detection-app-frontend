@@ -1,0 +1,10 @@
+ body{
+   margin:0;
+   padding:0;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifnpm install react-particle;
+   background: rgb(9,98,103);
+   background: linear-gradient(90deg, rgba(9,98,103,1) 0%, rgba(10,141,126,1) 13%, rgba(13,184,179,1) 41%, rgba(0,255,247,1) 100%);
+ }
+ button{
+   cursor: pointer;
+ }
