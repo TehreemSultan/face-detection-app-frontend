@@ -6,7 +6,7 @@ const SignIn = ({loadUser, onRouteChange}) => {
   const [signInPassword, setsignInPassword] = useState('');
   
   const onSubmitSignIn =  () => {
-     fetch('http://localhost:5000/signin',{
+     fetch('https://intense-inlet-71380.herokuapp.com/signin',{
        method:'post',
        headers:{'Content-Type':'application/json'},
        body:JSON.stringify({
@@ -14,7 +14,7 @@ const SignIn = ({loadUser, onRouteChange}) => {
          password:signInPassword
        })
      })
-    .then(response => response.json())
+    .then(response =>response.json())
     .then(user =>{
          if(user.email){
           loadUser(user);
@@ -22,7 +22,7 @@ const SignIn = ({loadUser, onRouteChange}) => {
          }else{
            alert('wrong credentials')
          }})
-    .catch(err=>{console.log('cant login')})
+    .catch(err=>{console.log(err,'cant loginn')})
    } 
   return (
         <article className="br3 shadow-5 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 center">

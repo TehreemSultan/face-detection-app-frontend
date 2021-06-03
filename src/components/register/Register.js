@@ -7,7 +7,7 @@ const SignIn = ({loadUser,onRouteChange}) => {
 
   
   const onSubmitRegister =  () => {
-    fetch('http://localhost:5000/register',{
+    fetch('https://intense-inlet-71380.herokuapp.com/register',{
       method:'post',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
@@ -18,7 +18,7 @@ const SignIn = ({loadUser,onRouteChange}) => {
     })
    .then(response => response.json())
    .then(user =>{
-        if(user){
+        if(user.email){
           loadUser(user);
         onRouteChange('home');
         }})

@@ -82,7 +82,7 @@ const onBtnSubmit= (e) =>{
   app.models.predict(Clarifai.FACE_DETECT_MODEL,input)
   .then(res =>{
     if(res){
-    fetch('http://localhost:5000/image',{
+    fetch('https://intense-inlet-71380.herokuapp.com/image',{
     method:'put',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({
